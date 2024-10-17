@@ -31,8 +31,8 @@ void loop() {
 
 **Vídeo demonstrando o funcionamento do circuito no Tinkercad:**
 
-
+https://github.com/user-attachments/assets/95887982-fb61-422a-8eb8-dade10d806fb
 
 **Vídeo demonstrando o funcionamento do circuito físico:**
 
-
+https://github.com/user-attachments/assets/b986be45-6349-44f8-8c6e-c1b5f7d562d6
