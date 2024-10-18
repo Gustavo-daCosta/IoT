@@ -48,23 +48,17 @@ Para ligar o led, é necessária uma tensão elétrica mínima de 1,2V e máxima
 
 Considerando uma tensão de entrada de 5V e uma tensão de saíde de 2,4V:
 
-\[
-V_R = 5V - 2,4V = 2,6V
-\]
+$V_R = 5V - 2,4V = 2,6V$
 
 Um led normalmente possui corrente de 20mA, sendo assim \( I = 0,02A \)
 
 A lei de Ohm nos dá a seguinte fórmula para calcular a resistência necessária:
 
-\[
-R = \frac{V_R}{I}
-\]
+$R = \frac{V_R}{I}$
 
 Substituindo os valores:
 
-\[
-R = \frac{2,6V}{0,02A} = 130\ \Omega
-\]
+$R = \frac{2,6V}{0,02A} = 130\ \Omega$
 
 Por fim, conclui-se que é necessário um resistor de 130 ohms para fazer o led funcionar na tensão e corrente adequada.
 
@@ -94,5 +88,8 @@ void loop() {
 
 **Vídeo demonstrando o funcionamento do circuito no Tinkercad:**
 
+https://github.com/user-attachments/assets/f22da2b6-0286-4e54-89e2-dcb07e5f4f01
 
 **Vídeo demonstrando o funcionamento do circuito físico:**
+
+https://github.com/user-attachments/assets/52eb6313-88f7-4231-8a87-ad71aa0956a7
