@@ -12,12 +12,14 @@ uma protoboard, considerando que os LEDs devem seguir o mesmo padrão de cores d
 | Arduino UNO              | 1              |
 | LED                      | 3              |
 | Jumper Macho-Macho       | 6              |
-| Resistor                 | 3              |
+| Resistor 1kOhms 5%       | 3              |
 | Buzzer                   | 1              |
 
 ### 1.2 Montagem
 
 A montagem consistiu em encaixar os LEDs na estrutura do semáforo e conectar os LEDs na protoboard e os LEDs foram conectados na placa do Arduino através dos resistores. Por fim, o Buzzer foi colocado na Protoboard, se aproveitando da trilha dos LEDs para puxar o GND e um novo jumper foi colocado para conectar o Buzzer a um pino do Arduino.
+
+<img src="https://github.com/user-attachments/assets/da829e9c-053c-43d5-9623-66f9ac4c4cbe" width=300px />
 
 ---
 
@@ -51,6 +53,9 @@ void loop() {
 
 ## Resultado final
 
+Vídeo com o resultado final do projeto, para ouvir o buzzer, ligue o áudio.
+
+https://github.com/user-attachments/assets/ec9a5d39-da43-4dad-a3a9-93c6f5e4945b
 
 ---
 
