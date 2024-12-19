@@ -1,8 +1,7 @@
 #include "Led.h"
-#include <Arduino.h>
 
-Led::Led(int ledRed, int ledGreen, int ledBlue)
-    : ledRed(ledRed), ledGreen(ledGreen), ledBlue(ledBlue) {}
+Led::Led()
+    : startTime(0), period(0) {}
 
 void Led::setup() {
     pinMode(ledRed, OUTPUT);
@@ -17,7 +16,7 @@ void Led::writeToLed(int ledRedValue, int ledGreenValue, int ledBlueValue) {
     analogWrite(ledBlue, ledBlueValue);
 }
 
-void Led::turnOnLed(LedColor color) {
+void Led::turnOnLed(LedColor color, int period) {
     switch (color) {
         case RED:
             writeToLed(255, 0, 0);
@@ -32,10 +31,23 @@ void Led::turnOnLed(LedColor color) {
             turnOffLed();
             break;
     }
+    
+    if (period > 0) {
+        this -> period = period;
+        if (startTime == 0) startTime = millis();
+    }
 }
 
 void Led::turnOffLed() {
     digitalWrite(ledRed, LOW);
     digitalWrite(ledGreen, LOW);
     digitalWrite(ledBlue, LOW);
+    startTime = 0;
+    period = 0;
+}
+
+void Led::update() {
+    if (period > 0 && millis() - startTime >= period) {
+        turnOffLed();
+    }
 }

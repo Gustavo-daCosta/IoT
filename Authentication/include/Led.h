@@ -1,22 +1,34 @@
 #ifndef LED_H
 #define LED_H
 
-enum LedColor {RED, GREEN, BLUE};
+#include <Arduino.h>
+
+enum LedColor {
+    RED,
+    GREEN,
+    BLUE
+};
 
 class Led {
-    private:
-        const int ledRed = 13;
-        const int ledGreen = 15;
-        const int ledBlue = 5;
+private:
+    const int ledRed = 33;
+    const int ledGreen = 26;
+    const int ledBlue = 27;
+    unsigned long startTime;
+    int period;
+    Led();
 
-    protected:
-        void writeToLed(int ledRedValue, int ledGreenValue, int ledBlueValue);
+public:
+    static Led& getInstance();
+    void setup();
+    void writeToLed(int ledRedValue, int ledGreenValue, int ledBlueValue);
+    void turnOnLed(LedColor color, int period = 0);
+    void turnOffLed();
+    void update();
 
-    public:
-        Led(int ledRed, int ledGreen, int ledBlue);
-        void setup();
-        void turnOnLed(LedColor color);
-        void turnOffLed();
+    // Proíbe a criação de novas instâncias da classe Led
+    Led(const Led&) = delete;
+    Led& operator = (const Led&) = delete;
 };
 
 #endif
